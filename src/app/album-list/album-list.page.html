@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ headerTitle }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ul>
+    <li *ngFor="let album of (albums$ | async)" (click)="openAlbum(album.id)">
+      <br />
+      {{ album | json }}
+      <br />
+    </li>
+  </ul>
+</ion-content>

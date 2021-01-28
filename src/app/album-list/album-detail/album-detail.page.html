@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ (album$ | async)?.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let photo of (photos$ | async)">
+    <img [src]="photo.url" />
+    <ion-card-header>
+      <ion-card-title>{{ photo.title }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
